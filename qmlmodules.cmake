@@ -13,3 +13,6 @@ endif()
 
 add_subdirectory(Qaterial)
 target_link_libraries(Acceptit PRIVATE Qaterial)
+
+add_subdirectory(Gallery)
+target_link_libraries(Acceptit PRIVATE Gallery)

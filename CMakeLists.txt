@@ -11,7 +11,8 @@ find_package(Qt6 REQUIRED COMPONENTS
     Quick
     QuickControls2
     Svg
-    Xml)
+    Xml
+)
 
 qt_standard_project_setup(REQUIRES 6.7)
 
@@ -22,6 +23,7 @@ qt_add_executable(Acceptit
 qt_add_qml_module(Acceptit
     URI Acceptit
     VERSION 1.0
+    # RESOURCE_PREFIX "/qt/qml"
     QML_FILES Main.qml
 )
 
