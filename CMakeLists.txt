@@ -16,9 +16,12 @@ find_package(Qt6 REQUIRED COMPONENTS
 
 qt_standard_project_setup(REQUIRES 6.7)
 
-qt_add_executable(Acceptit
-    main.cpp
-)
+
+if (${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR})
+    qt_add_executable(Acceptit main.cpp)
+else()
+    add_library(Acceptit STATIC)
+endif()
 
 qt_add_qml_module(Acceptit
     URI Acceptit
